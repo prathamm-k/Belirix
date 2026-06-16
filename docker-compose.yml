@@ -1,0 +1,52 @@
+version: "3.8"
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: belirix-frontend-dev
+    ports:
+      - "2002:2002"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      - VITE_BACKEND_TARGET=http://backend:9002
+    depends_on:
+      - backend
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: belirix-backend-dev
+    ports:
+      - "9002:9002"
+    volumes:
+      - ./backend:/app
+    environment:
+      - LLAMA_SERVER_HOST=llama-server
+      - LLAMA_SERVER_PORT=8080
+    depends_on:
+      - llama-server
+    restart: unless-stopped
+
+  llama-server:
+    build:
+      context: .
+      dockerfile: llama-server/Dockerfile
+    container_name: belirix-llama-dev
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./model:/models
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    restart: unless-stopped
