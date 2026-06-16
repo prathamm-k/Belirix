@@ -53,7 +53,7 @@ Building this robust local AI pipeline presented several complex engineering cha
 First, clone the repository to your local machine:
 ```bash
 git clone https://github.com/prathamm-k/Belirix.git
-cd belirix
+cd Belirix
 ```
 
 ### Option A: Developer Setup (Recommended for Coding)
@@ -104,7 +104,7 @@ docker run -d \
 
 ## Project Structure
 ```
-belirix/
+Belirix/
 ├── backend/
 │   ├── main.py               # FastAPI entrypoint and lifespan manager
 │   ├── routers/              # API endpoints (chat, health, upload)
@@ -162,7 +162,7 @@ Licensed under the [MIT License](LICENSE).
 ---
 
 ## Repository
-GitHub: [prathamm-k/belirix](https://github.com/prathamm-k/Belirix)
+GitHub: [prathamm-k/Belirix](https://github.com/prathamm-k/Belirix)
 
 ## Contact
 Created by [prathamm-k](https://github.com/prathamm-k) — feel free to reach out via GitHub.
