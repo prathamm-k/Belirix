@@ -52,7 +52,7 @@ Building this robust local AI pipeline presented several complex engineering cha
 
 First, clone the repository to your local machine:
 ```bash
-git clone https://github.com/prathamm-k/belirix.git
+git clone https://github.com/prathamm-k/Belirix.git
 cd belirix
 ```
 
@@ -157,12 +157,12 @@ belirix/
 Contributions are welcome! Please submit issues or open pull requests to suggest enhancements, optimization patterns, or new features.
 
 ## License
-Internal BHEL project. Not for public distribution.
+Licensed under the [MIT License](LICENSE).
 
 ---
 
 ## Repository
-GitHub: [prathamm-k/belirix](https://github.com/prathamm-k/belirix)
+GitHub: [prathamm-k/belirix](https://github.com/prathamm-k/Belirix)
 
 ## Contact
 Created by [prathamm-k](https://github.com/prathamm-k) — feel free to reach out via GitHub.
